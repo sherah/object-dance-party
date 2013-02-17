@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object Dance Party</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/jquery.lightbox_me.js"></script>
+  <script src="src/blinkyDancer.js"></script>
+  <script src="src/otherDancers.js"></script>
+  <script src="src/dancerMixins.js"></script>
+  <script src="src/danceFloor.js"></script>
+  <script src="src/controls.js"></script>
+  <script src="src/main.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <a id='instructions' href="#">INSTRUCTIONS</a>
+    <div class='instructions' hidden=true><p>Starting in main.js,
+We are creating an object with each property pointing to each make*Dancer(fn), then initializing an empty array to hold each new dancer that will be created by danceFloor.js. In danceFloor.js we pass in the objects from main.js and randomly put them on the stage div. Then the controls are setup, inside controls.js we use jquery to capture clicks on any anchor with a 'clickable' class. on "click" we capture the data-dance-creator attribute and pass it back to danceFloor.makeDancer, which uses the passed in value to add a new dancer{object} to the dancer[array] in main.js, and adds a dancer to a random spot on the "stage" div. Multiple types of dancers can be created, including blinkyDancer, snowManDancer, &amp; buttShakingDancer. The last two inherit blinkyDancer's properties.  These dancers are found inside otherDancers.js which adds properties of their own to make them slightly different css-wise.  The program contains one mixin, found in dancerMixins.js, which changes the color of a random dancer on the stage.</p></div>
+    <span class="title">object dance party</span>
+    <span class="clickable" data-dancer-creator="makeBlinkyDancer">
+    <a href="#">make a dancer</a>
+    </span>
+    <span class="clickable" data-dancer-creator="makeButtShakingDancer">
+    <a href="#">make a Butt Shaking Dancer</a>
+    </span>    
+    <span class="clickable" data-dancer-creator="makeSnowManDancer">
+    <a href="#">make a SnowManDancer</a>
+    </span>
+    <span class="outfit">
+    <a id="outfit" href="#">Outfit Changer</a>
+    </span>
+  </div>
+
+
+  <div class="stage">
+    <div class="triangle"></div><div class='dj'>DJ</div>
+  </div>
+
+</body>
+</html>
+
+

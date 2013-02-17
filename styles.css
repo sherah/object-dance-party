@@ -1,0 +1,70 @@
+body, html{
+  height:100%;
+}
+body{
+  margin: 0px;
+  background-color:lightgray;
+  font-size: 18px;
+}
+body, a:link, a:visited, a:active{
+  color: lightblue;
+}
+.topbar span{
+  padding:5px 12px;
+  float:right;
+}
+.topbar{
+  height:32px;
+  background-color: #555;
+}
+.title{
+  background-color: #777;
+}
+.dancer{
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+}
+
+.dancing-butt {
+  border: 10px solid green;
+  border-radius: 10px;
+  left: 5px;
+  position: relative;
+}
+
+.instructions {
+  text-align: center;
+  width: 40%;
+}
+
+.snow-man {
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  border: 10px solid blue;
+  border-radius: 30px;
+  position:absolute;  
+}
+
+.dj {
+  font-size: 12;
+  bottom: 40px;
+  left: 40%;
+  right: 40%;
+  text-align: center;
+  position: fixed;
+}
+
+.triangle{
+  width: 0; 
+  height: 0; 
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 55px solid red;
+  position:fixed;
+  margin: auto;
+  bottom: 40px;
+  left: 40%;
+  right: 40%;
+}
